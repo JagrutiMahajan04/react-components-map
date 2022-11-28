@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import TaskCard from "./components/TaskCard/Task.js"
 
 function App() {
+
+  const tasks = [{ title:"C-language",deadline:"📅2Feb"},{ title:"C++",deadline:"📅2Jan"},{ title:"ICP",deadline:"📅25Dec"},{ title:"Data Structures",deadline:"📅20Jan"}]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {
+        tasks.map((element,i)=>{
+
+          return(<TaskCard title = {element.title} deadline ={element.deadline}/>)
+        })
+      }
+
+    </>
+     
   );
 }
 

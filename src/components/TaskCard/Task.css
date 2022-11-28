@@ -1,0 +1,9 @@
+.task-container{
+    width :200px;
+    padding:5px;
+    margin :5px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px black;
+  
+  }
